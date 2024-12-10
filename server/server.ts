@@ -11,7 +11,7 @@ app.get("/presidents", (c) => {
     return c.json({ presidents });
 });
 
-// Get Request - Ide request-et küldve vissza kapsz egy elnökét
+// Get Request - Ide request-et küldve vissza kapsz egy elnököt
 app.get("/presidents/:id", (c) => {
     const id = c.req.param("id");
     const president = presidents.find((p) => p.id.toString() === id);
@@ -23,7 +23,7 @@ app.get("/presidents/:id", (c) => {
     return c.json({ president });
 });
 
-// Delete Request - Ide request-et küldve tudsz elnökét törölni MUHAHAHA😏
+// Delete Request - Ide request-et küldve tudsz elnököt törölni MUHAHAHA😏
 app.delete("/presidents/:id", (c) => {
     const id = c.req.param("id");
     const index = presidents.findIndex((p) => p.id.toString() === id);
